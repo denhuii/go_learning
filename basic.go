@@ -22,9 +22,31 @@ func variableInitialValue() {
 	fmt.Println(a, s)
 }
 
+// 枚举类型
+func enums() {
+	const (
+		cpp    = 0
+		java   = 1
+		python = 2
+		golang = 3
+	)
+
+	// 普通枚举类型
+	fmt.Println(cpp, java, python, golang)
+	const (
+		b = 1 << (10 * iota)
+		kb
+		mb
+		gb
+		tb
+	)
+	// 子增值枚举类型
+	fmt.Println(b, kb, mb, gb, tb)
+}
 func main() {
 	//fmt.Println("Hello world")
-	variable()
-	variableShorter()
-	variableInitialValue()
+	//variable()
+	//variableShorter()
+	//variableInitialValue()
+	enums()
 }
